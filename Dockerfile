@@ -19,6 +19,12 @@ RUN make && make install && ldconfig
 
 WORKDIR /usr/src/owl
 
-RUN haxelib install heaps
+RUN haxelib install \
+  #hldx \
+  #hlopenal \
+  #hlsdl \
+  heaps
+
+ADD . ./
 
 CMD ["haxe"]
